@@ -1,0 +1,74 @@
+62,Pensioner Concession Card holder PC,Paid,Concession,Other Concession,Other Concession
+29,Vic HCC - Sickness allowance,Paid,Concession,Other Concession,Other Concession
+43,First Class Pass,Free,Concession,Free Pass,Other
+34,PCC - Widow allowance,Paid,Concession,Other Concession,Other Concession
+47,Victoria Police Travel Authority,Free,Concession,Free Pass,Other
+50,Federal Parliamentarian Travel Pass ,Free,Concession,Free Pass,Other
+33,Vic HCC - Widow allowance,Paid,Concession,Other Concession,Other Concession
+31,Vic HCC - Special benefit,Paid,Concession,Other Concession,Other Concession
+42,Employee Travel Pass/Redeployee Travel Pass,Free,Concession,Free Pass,Other
+45,Retired Employee Dependent Travel Pass,Free,Concession,Free Pass,Other
+11,PCC - Pensioner Age Pension,Paid,Concession,Other Concession,Senior_Aged Pension
+0,Default Full Fare,Paid,Full Fare,Full Fare,Full Fare
+4,Child Concession 5 yrs to <= 18yrs,Paid,Concession,Child,Student
+25,PCC - Vic HCC - Newstart allowance,Paid,Concession,Other Concession,Other Concession
+32,PCC - Special benefit,Paid,Concession,Other Concession,Other Concession
+55,Red Book Travel Pass,Free,Concession,Free Pass,Other
+64,Employee Travel Pass,Free,Concession,Free Pass,Other
+67,Asylum Seekers,Paid,Concession,Other Concession,Other Concession
+12,HCC -  Carer Allowance (Child),Paid,Concession,Other Concession,Other Concession
+61,Health Care Card holder HC,Paid,Concession,Other Concession,Other Concession
+54,Gold Pass Travel Pass,Free,Concession,Free Pass,Other
+68,Full-fare DHS Carer Free Weekend,Paid,Full Fare,Full Fare,Full Fare
+14,PCC - Disability support pension,Paid,Concession,Other Concession,Other Concession
+52,Governors Travel Pass,Free,Concession,Free Pass,Other
+69,Concession DHS Carer Free Weekend,Paid,Concession,Other Concession,Other Concession
+30,PCC - Sickness allowance,Paid,Concession,Other Concession,Other Concession
+3,General Student Concession,Paid,Concession,Other Concession,Tertiary
+21,PCC - Wife Pension,Paid,Concession,Other Concession,Other Concession
+35,PCC - Vic HCC - Youth allowance,Paid,Concession,Other Concession,Other Concession
+59,Australian (Interstate) Seniors Card Holder (AS),Paid,Concession,Other Concession,Senior_Aged Pension
+18,PCC - Parenting Payment Single,Paid,Concession,Other Concession,Other Concession
+60,Bus drivers (Regional and Metropolitan (AB),Free,Concession,Free Pass,Other
+63,Tertiary Half Yearly Student concession,Paid,Concession,Other Concession,Tertiary
+66,Wheel Chair Scooter Pass,Free,Concession,Free Pass,Other
+19,PCC - Widow B Pension,Paid,Concession,Other Concession,Other Concession
+44,Retired Employee Travel Pass,Free,Concession,Free Pass,Other
+65,Commuter Club,Paid,Full Fare,Full Fare,Full Fare
+38,Travel trainer Pass,Free,Concession,Free Pass,Other
+9,Victorian Seniors Concession,Paid,Concession,Seniors,Senior_Aged Pension
+10,Australian Pension Concession Card and Victorian Senior Card,Paid,Concession,Seniors,Senior_Aged Pension
+57,Access Travel Pass (ATP),Free,Concession,Free Pass,Other
+100,Staff Card,Free,Concession,Free Pass,Other
+22,PCC - Wife Pension,Paid,Concession,Other Concession,Other Concession
+15,PCC - Mature Age Allowance,Paid,Concession,Other Concession,Other Concession
+7,Tertiary Student Concession,Paid,Concession,Other Concession,Tertiary
+13,PCC - Carer Payment,Paid,Concession,Other Concession,Other Concession
+36,DVA Pensioner,Paid,Concession,Other Concession,Other Concession
+51,State Parliamentarian Travel Pass ,Free,Concession,Free Pass,Other
+39,War Veterans Travel Pass,Free,Concession,Free Pass,Other
+46,Federal Police Travel Pass,Free,Concession,Free Pass,Other
+23,Vic HCC - Family Tax Benefit A,Paid,Concession,Other Concession,Other Concession
+70,International Student,Paid,Concession,International Student,Tertiary
+-1,UNKNOWN,Paid,Concession,Other Concession,Full Fare
+27,Vic HCC - Partner allowance,Paid,Concession,Other Concession,Other Concession
+16,PCC - Vic HCC - Parenting Payment Partnered,Paid,Concession,Other Concession,Other Concession
+40,TPI War Veterans Travel Pass,Free,Concession,Free Pass,Other
+6,Secondary Student Concession,Paid,Concession,Child,Student
+24,Vic HCC - Low Income ,Paid,Concession,Other Concession,Other Concession
+5,Primary Student Concession,Paid,Concession,Child,Student
+20,PCC - Wife Pension,Paid,Concession,Other Concession,Other Concession
+49,Victorian Black Book Travel Pass,Free,Concession,Free Pass,Other
+71,Technician Validation Card,Free,Concession,Other Concession,Other
+56,Replacement Short Term Ticket,Free,Concession,Free Pass,Other
+17,PCC - Parenting Payment Partnered,Paid,Concession,Other Concession,Other Concession
+8,War Veterans / War Widows,Paid,Concession,Other Concession,Other Concession
+28,PCC - Partner allowance,Paid,Concession,Other Concession,Other Concession
+37,Vision Impaired ,Free,Concession,Free Pass,Other
+2,General Concession,Paid,Concession,Other Concession,Other Concession
+53,Gold Elite Travel Pass,Free,Concession,Free Pass,Other
+58,Charitable Organisation(CO),Free,Concession,Free Pass,Other
+1,Full Fare,Paid,Full Fare,Full Fare,Full Fare
+26,PCC - Newstart allowance,Paid,Concession,Other Concession,Other Concession
+41,Widow of World War 1 Veteran,Free,Concession,Free Pass,Other
+48,Transit Police Travel Pass,Free,Concession,Free Pass,Other

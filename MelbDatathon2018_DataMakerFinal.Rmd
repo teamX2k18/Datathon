@@ -1,0 +1,146 @@
+
+# Install and load required R libraries
+
+
+```{r, message = FALSE, warning=FALSE}
+# Install and load required libraries
+# Install.packages('data.table')
+inst <- FALSE;
+inst <- TRUE;
+if(inst){
+install.packages("tidyverse")
+install.packages("mlr")
+install.packages("rJava")
+install.packages("FSelector")
+install.packages("ggplot2")
+install.packages("gridExtra")
+install.packages("gmodels")
+install.packages("GGally")
+install.packages("cowplot")
+install.packages("tidyr")
+install.packages("magrittr")
+install.packages("moments")
+install.packages("purrr")
+install.packages("data.table")
+install.packages("latex2exp")
+install.packages("caret")
+install.packages("robustHD")
+install.packages("spFSR")
+install.packages("rjson")
+install.packages("party")
+install.packages("knitr")
+install.packages("kableExtra")
+install.packages("stringr")
+install.packages("mlbench")
+install.packages("e1071")
+install.packages("taRifx")
+install.packages("plotly")
+install.packages("MASS")
+install.packages("ggmap")
+install.packages("kknn")
+install.packages("ggplot2")
+install.packages("ggmap")
+install.packages("neuralnet")
+}
+```
+
+
+```{r, message = FALSE, warning=FALSE}
+Sys.setenv(JAVA_HOME='C:\\Program Files\\Java\\jre8')
+library(dplyr)
+library(plyr)
+library(readr)
+library(tidyverse)
+library(lubridate)
+library(mlr)
+library(tidyverse) # for ggplot and data wrangly
+library(rJava)
+library(FSelector) 
+library(taRifx)
+library(ggplot2)
+library(gridExtra)
+library(gmodels)
+library(GGally)
+library(cowplot)
+library(tidyr)
+library(magrittr)
+library(moments)
+library(purrr)
+library(data.table)
+library(latex2exp)
+library(caret)
+library(robustHD)
+library(spFSR)
+library(rjson)
+library(party)
+library(knitr)
+library(kableExtra)
+library(stringr)
+library(mlbench)
+library(e1071)
+library(MASS)
+library(ggplot2)
+library(ggmap)
+library(neuralnet)
+set.seed(999)
+memory.limit(size = 5000000000)
+```
+
+# Load Calander Dataset
+```{r}
+
+mycalendar <- fread('calendar.txt')
+mycalendar <- mycalendar[,-1]
+mycard_types <- fread('card_types.txt')
+stop_loc <- fread('stop_locations.txt')
+
+colnames(mycalendar) <- c('Date', 'CalendarYear', 'FinancialYear', 'FinancialMonth', 'CalendarMonth', 'CalendarMonthSeq', 'CalendarQuarter', 'FinancialQuarter', 'CalendarWeek', 'FinancialWeek', 'DayType', 'DayTypeCategory', 'WeekdaySeq', 'WeekDay', 'Day', 'FinancialMonthSeq', 'FinancialMonthName', 'MonthNumber', 'ABSWeek', 'WeekEnding', 'QuarterName')
+calendar <- mycalendar[,c("Date","WeekdaySeq","WeekDay")]
+
+colnames(mycard_types) <- c('CardType', 'Card_SubType_Desc', 'Payment_Type', 'Fare_Type', 'Concession_Type', 'MI_Card_Group')
+card_types <- mycard_types[,c("CardType","Payment_Type","MI_Card_Group")]
+
+colnames(stop_loc) <- c('StopID', 'StopNameShort', 'StopNameLong', 'StopType', 'SuburbName', 'PostCode', 'RegionName', 'LocalGovernmentArea', 'StatDivision', 'GPSLat', 'GPSLong')
+```
+
+# ####################################################
+# Generate Neural Network
+# ####################################################
+
+
+# nural network
+
+```{r}
+
+myClassifier <- fread('myClassifier.csv')
+myTester <- fread('myTester.csv')
+
+#https://datascienceplus.com/fitting-neural-network-in-r/
+
+data <- myClassifier %>% group_by(hour,StopID,WeekDay, RouteID) %>% dplyr::summarize(count=n())
+data <- as.data.frame(data)
+index <- sample(1:nrow(data),round(0.7*nrow(data)))
+train <- data[index,]
+test <- data[-index,]
+
+```
+
+#train Neural network
+```{r}
+nn <- neuralnet(train$count ~ train$hour + train$StopID + train$WeekDay +train$RouteID,train,  hidden=c(4,3),linear.output=T)
+saveRDS(nn, "nn.model");
+#nn <- readRDS("nn.model");
+plot(nn)
+```
+
+# Prediction test
+```{r}
+##not updated 
+pr.nn <- compute(nn,test_[,1:13])
+pr.nn_ <- pr.nn$net.result*(max(data$medv)-min(data$medv))+min(data$medv)
+test.r <- (test_$medv)*(max(data$medv)-min(data$medv))+min(data$medv)
+MSE.nn <- sum((test.r - pr.nn_)^2)/nrow(test_)
+print(paste(MSE.lm,MSE.nn))
+```
+
+#conclusion
